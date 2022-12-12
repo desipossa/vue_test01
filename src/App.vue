@@ -1,10 +1,16 @@
 <template>
   <ul>
+    <!-- 기본 loop for문 -->
     <li v-for="na in name" :key="na">
       {{ na }}
     </li>
   </ul>
-  <h3 :class="{ on: active }" @click="toggleClass('', $event), increase(1)">
+  <!-- toggle class 만들기 vue에서 조건에 따른 클래스를 넣어주는 방식 :class="{'클래스명': '조건'}"-->
+  <h3
+    class="xxx"
+    :class="{ on: active }"
+    @click="toggleClass('', $event), increase(1)"
+  >
     PRODUCT {{ active }}
   </h3>
   <ul>
